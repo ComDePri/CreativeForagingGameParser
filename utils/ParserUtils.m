@@ -82,7 +82,7 @@ g=Graph[UndirectedEdge@@@alledges/.R];
 symrule=Dispatch@ReadList["symrule.txt"];
 
 
-calcOrigUnited[parsedSubjectData_]:=Module[{data={ReadList["Vanilla.txt"],parsedSubjectData},allShapesAndTimes,galleryShapesAndTimes,galleryShapes},
+calcOrigUnited[parsedSubjectData_]:=Module[{data={ReadList["control.txt"],parsedSubjectData},allShapesAndTimes,galleryShapesAndTimes,galleryShapes},
 allShapesAndTimes=Join@@Join@@data[[;;,;;,3]];
 galleryShapesAndTimes=Select[allShapesAndTimes,Length@#==3&];
 galleryShapes=galleryShapesAndTimes[[;;,1]];
